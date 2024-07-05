@@ -37,8 +37,8 @@ class TicketGeneratorApp:
         self.qr_url = tk.StringVar(value="https://chat.whatsapp.com/yourgroupinviteurl")
         self.base_image_path = "entrada.png"
         # Replace / by _
-        self.output_pdf_path = "tickets_" + self.date.get().replace("/", "_") + ".pdf"
-        self.text_x = tk.IntVar(value=300)
+        self.output_pdf_path = "tickets_" + self.date.get().replace("/", "_").replace(" ", "_").replace(":", "_") + ".pdf"
+        self.text_x = tk.IntVar(value=220)
         self.text_y = tk.IntVar(value=130)
         self.qr_x = tk.IntVar(value=22)
         self.qr_y = tk.IntVar(value=45)
