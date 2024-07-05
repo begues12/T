@@ -155,9 +155,13 @@ class TicketGeneratorApp:
 
         tickets_per_page = 6
         ticket_width = 211  # Full width of the A4 page
-        ticket_height = 46
-        space_between_tickets = 3
+        space_between_tickets = 1
 
+        # Page height, / number of tickets per page and space between tickets
+        ticket_page_height = 297
+        ticket_height = (ticket_page_height - (tickets_per_page - 1) * space_between_tickets) / tickets_per_page
+        
+        
         num_tickets = self.num_tickets.get()
         self.progress["maximum"] = num_tickets
 
